@@ -26,6 +26,14 @@ nav {
   text-transform: uppercase;
 }
 
+.log-in {
+  color: #FFF;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  text-decoration: none;
+}
+
 .background-container {
   height: 100vh;
   position: relative;
@@ -52,43 +60,39 @@ main {
   justify-content: center;;
 }
 
-.log-in {
-  color: #FFF;
-  cursor: pointer;
-  font-size: 24px;
-  text-decoration: none;
-}
-
 .tagline {
   color: #00BBD2;
   font-family: 'Roboto Slab', serif;
   font-size: 60px;
 }
 
+.location-input,
+#radius-selector,
+.search-btn {
+  height: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
+
+}
+
 .location-input {
   width: 350px;
-  height: 50px;
   padding-left: 10px;
   border-radius: 7px;
   color: #4D4D4F;
-  font-size: 22px;
 }
 
 #radius-selector {
   width: 175px;
-  height: 50px;
   margin: 0 25px;
-  font-size: 22px;
 }
 
 .search-btn {
   width: 175px;
-  height: 50px;
   background-color: #00BBD2;
   border: none;
   border-radius: 7px;
   color: #FFF;
   cursor: pointer;
-  font-size: 22px;
   outline: none;
 }
