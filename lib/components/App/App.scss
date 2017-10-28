@@ -1,0 +1,16 @@
+// variables
+$default-font: 'Open Sans', sans-serif;
+$header-font: 'Roboto Slab', serif;
+$base-digital: rgba(77,77,79,1);
+$accent-digital: rgba(0,187,210,1);
+$default-text: rgba(255,255,255,1);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $default-font;
+}
