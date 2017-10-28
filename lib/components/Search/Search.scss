@@ -1,0 +1,40 @@
+@import '../App/App.scss';
+
+.location-input,
+#radius-selector,
+.search-btn {
+  height: 50px;
+  font-size: 22px;
+  border: 1px solid #666;
+}
+
+.location-input {
+  width: 350px;
+  padding-left: 10px;
+  border-radius: 7px;
+  color: $base-digital;
+}
+
+#radius-selector {
+  height: 53px;
+  width: 175px;
+  margin: 0 25px;
+  color: $base-digital;
+}
+
+.search-btn {
+  width: 175px;
+  background-color: $accent-digital;
+  border: none;
+  border-radius: 7px;
+  color: $default-text;
+  cursor: pointer;
+  outline: none;
+
+  &:disabled {
+    background: lighten($base-digital, 50%);
+  }
+  &:hover {
+    background: darken($accent-digital, 10%);
+  }
+}
