@@ -1,0 +1,22 @@
+@import '../App/App.scss';
+
+.main-content {
+  display: flex;
+}
+
+.job-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
+  background: #ccc;
+  list-style: none;
+}
+
+.job {
+  height: 120px;
+  width: 75%;
+  border: 1px solid #666;
+  box-shadow: 1px 1px 1px #ccc;
+  color: #000;
+}

@@ -1,4 +1,4 @@
-const mockJobs = [
+module.exports = [
   {
   "title": "Frontend Software Developer",
   "company": "Turing School of Software and Design",
