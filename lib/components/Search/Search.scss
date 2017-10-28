@@ -1,0 +1,65 @@
+@import '../App/App.scss';
+
+.location-search {
+  display: flex;
+}
+
+.location-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.suggestion-container {
+  width: 350px;
+  position: absolute;
+  background: lighten($base-digital, 50%);
+  top: 50px;
+}
+
+.suggestions-list > li {
+  padding: 10px;
+  color: $base-digital;
+  font-size: 20px;
+  list-style: none;
+}
+
+.location-input,
+#radius-selector,
+.search-btn {
+  height: 50px;
+  font-size: 22px;
+  border: 1px solid #fff;
+}
+
+.location-input {
+  width: 350px;
+  padding-left: 10px;
+  border-radius: 7px;
+  color: $base-digital;
+  outline: none;
+}
+
+#radius-selector {
+  height: 53px;
+  width: 175px;
+  margin: 0 25px;
+  color: $base-digital;
+}
+
+.search-btn {
+  width: 175px;
+  background-color: $accent-digital;
+  border: none;
+  border-radius: 7px;
+  color: $default-text;
+  cursor: pointer;
+  outline: none;
+
+  &:disabled {
+    background: lighten($base-digital, 50%);
+  }
+  &:hover {
+    background: darken($accent-digital, 10%);
+  }
+}
