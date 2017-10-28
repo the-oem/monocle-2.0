@@ -14,9 +14,28 @@
 }
 
 .job {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 120px;
   width: 75%;
   border: 1px solid #666;
   box-shadow: 1px 1px 1px #ccc;
   color: #000;
+}
+
+.job-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.job-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.share-save {
+  display: flex;
 }
