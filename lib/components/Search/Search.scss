@@ -1,5 +1,29 @@
 @import '../App/App.scss';
 
+.location-search {
+  display: flex;
+}
+
+.location-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.suggestion-container {
+  width: 350px;
+  position: absolute;
+  background: lighten($base-digital, 50%);
+  top: 50px;
+}
+
+.suggestions-list > li {
+  padding: 10px;
+  color: $base-digital;
+  font-size: 20px;
+  list-style: none;
+}
+
 .location-input,
 #radius-selector,
 .search-btn {
@@ -13,6 +37,7 @@
   padding-left: 10px;
   border-radius: 7px;
   color: $base-digital;
+  outline: none;
 }
 
 #radius-selector {
