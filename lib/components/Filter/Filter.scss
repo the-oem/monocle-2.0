@@ -2,4 +2,18 @@
 
 .filter-aside {
   width: 30%;
+  padding: 20px;
+}
+
+.filter-aside > h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.recent-search-list {
+  list-style: none;
+}
+
+.recent-search-checkbox {
+  margin-right: 10px;
 }
