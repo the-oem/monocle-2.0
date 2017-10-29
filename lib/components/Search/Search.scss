@@ -2,6 +2,7 @@
 
 .location-search {
   display: flex;
+  justify-content: center;
 }
 
 .location-container {
@@ -41,7 +42,6 @@
 }
 
 #radius-selector {
-  height: 53px;
   width: 175px;
   margin: 0 25px;
   color: $base-digital;

@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 75%;
+  width: 70%;
   background: #ccc;
   list-style: none;
 }
@@ -18,11 +18,13 @@
   justify-content: space-between;
   align-items: center;
   height: 120px;
-  width: 75%;
+  width: 90%;
+  margin: 10px;
   padding: 15px;
-  border: 1px solid #666;
-  box-shadow: 1px 1px 1px #ccc;
-  color: #000;
+  background: #f2f2f2;
+  border: 1px solid $accent-digital;
+  box-shadow: 2px 2px 2px #666;
+  color: #666;
 }
 
 .job-info {
@@ -35,7 +37,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 30%;
+  width: 20%;
 }
 
 .share-save {
