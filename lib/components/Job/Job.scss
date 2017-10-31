@@ -1,0 +1,76 @@
+@import '../App/App.scss';
+
+.full-job-main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+}
+
+.full-job-aside {
+  width: 30%;
+  padding: 25px;
+
+}
+
+.full-job-section {
+  width: 70%;
+  padding: 25px;
+  background: #ccc;
+}
+
+.full-job-info {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.full-job-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.full-job-company {
+  color: $accent-digital;
+}
+
+.full-company-location {
+  display: flex;
+}
+
+.full-location-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+
+}
+
+.apply-now-link {
+  width: 150px;
+  height: 50px;
+  display: block;
+  line-height: 50px;
+  border-radius: 5px;
+  margin: 20px 0;
+  background: #00bbd2;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+}
+
+.aside-icon-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-job-description-header {
+  margin-bottom: 15px;
+  font-size: 25px;
+  color: $accent-digital;
+}
+
+.full-job-description {
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+}
