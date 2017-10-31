@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
   width: 70%;
   background: #ccc;
   list-style: none;
@@ -28,9 +29,31 @@
 }
 
 .job-info {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
+
+}
+
+.job-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.job-company {
+  color: $accent-digital;
+}
+
+.company-location {
+  display: flex;
+}
+
+.location-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+
 }
 
 .job-links {
@@ -49,6 +72,7 @@
 .share-container,
 .save-container {
   display: flex;
+  cursor: pointer;
 }
 
 .share-container img,

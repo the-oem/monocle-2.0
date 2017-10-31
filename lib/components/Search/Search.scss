@@ -21,8 +21,13 @@
 .suggestions-list > li {
   padding: 10px;
   color: $base-digital;
+  cursor: pointer;
   font-size: 20px;
   list-style: none;
+}
+
+.suggestions-list > li:hover {
+  font-weight: bold;
 }
 
 .location-input,
