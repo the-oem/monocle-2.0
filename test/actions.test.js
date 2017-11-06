@@ -34,15 +34,59 @@ describe('fetchIsLoading', () => {
 });
 
 describe('storeLocation', () => {
-  it('should return the assessment object', () => {
-    const assessmentObj = {
-      id: 'c2992ef2-c4b1-4594-a3b5-bf219957c3d8',
-      deck_id: 'introver-extrovert'
-    }
+  it('should return the current location', () => {
+    const location = 'Denver, CO, USA';
     const expectedAction = {
-      type: 'FETCH_ASSESSMENT_SUCCESS',
-      fetchedAssessment: assessmentObj
-    }
-    expect(action.fetchAssessmentSuccess(assessmentObj)).toEqual(expectedAction)
-  })
-})
+      type: 'STORE_LOCATION',
+      formattedAddress: location,
+    };
+    expect(action.storeLocation(location)).toEqual(expectedAction);
+  });
+});
+
+describe('storeLatLng', () => {
+  it('should return the current latitude and longitude', () => {
+    const latLngObj = {
+      latitude: 39.7392358,
+      longitude: -104.990251,
+    };
+    const expectedAction = {
+      type: 'STORE_LAT_LNG',
+      latLng: latLngObj,
+    };
+    expect(action.storeLatLng(latLngObj)).toEqual(expectedAction);
+  });
+});
+
+describe('storeQuery', () => {
+  // import mockJobs from external file
+  it.skip('should return the filteredJobs array', () => {
+    const expectedAction = {
+      type: 'STORE_QUERY',
+      queriedJobs: mockJobs,
+    };
+    expect(action.storeQuery(mockJobs)).toEqual(expectedAction);
+  });
+});
+
+describe('storeRadius', () => {
+  it('should return the radius object', () => {
+    const radius = '10';
+    const expectedAction = {
+      type: 'STORE_RADIUS',
+      radius: 160934,
+    };
+    expect(action.storeRadius(radius)).toEqual(expectedAction);
+  });
+});
+
+describe('storeRecentSearch', () => {
+  it('should return the recent search object', () => {
+    const location = 'Denver, CO, USA';
+    const expectedAction = {
+      type: 'STORE_RECENT_SEARCH',
+      recentSearch: location
+    };
+    expect(action.storeRecentSearch(location)).toEqual(expectedAction);
+  });
+});
