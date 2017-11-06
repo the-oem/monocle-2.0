@@ -74,7 +74,7 @@ describe('storeRadius', () => {
     const radius = '10';
     const expectedAction = {
       type: 'STORE_RADIUS',
-      radius: 160934,
+      radius: 16093.4,
     };
     expect(action.storeRadius(radius)).toEqual(expectedAction);
   });
