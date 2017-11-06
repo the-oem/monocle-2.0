@@ -98,3 +98,26 @@ describe('store radius', () => {
     expect(reducer.radius(undefined, action)).toEqual(expectedResponse);
   });
 });
+
+describe('store recent searches in an array', () => {
+  it('should have a default state', () => {
+    const defaultState = [];
+    expect(reducer.recentSearches(undefined, {})).toEqual(defaultState);
+  });
+
+  it('should add recent search to the array', () => {
+    const action = {
+      type: 'STORE_RECENT_SEARCH',
+      recentSearch: 'Denver, CO, USA',
+    };
+    const expectedResponse = ['Denver, CO, USA'];
+    expect(reducer.recentSearches(undefined, action)).toEqual(expectedResponse);
+
+    // const actionTwo = {
+    //   type: 'STORE_RECENT_SEARCH',
+    //   recentSearch: 'Birmingham, AL, USA',
+    // };
+    // const secondResponse = ['Birmingham, AL, USA', 'Denver, CO, USA'];
+    // expect(reducer.recentSearches(undefined, actionTwo)).toEqual(secondResponse);
+  });
+});
