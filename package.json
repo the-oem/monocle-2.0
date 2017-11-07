@@ -61,6 +61,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "fetch-mock": "^5.13.1",
     "firebase": "^4.6.0",
     "geolib": "^2.0.24",
     "history": "^4.7.2",
