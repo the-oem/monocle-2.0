@@ -1,4 +1,5 @@
 import * as action from '../lib/actions';
+import mockJobs from '../test-helpers/mockJobsData';
 
 describe('fetchHasErred', () => {
   it('fetchHasErred should return a boolean', () => {
@@ -59,8 +60,7 @@ describe('storeLatLng', () => {
 });
 
 describe('storeQuery', () => {
-  // import mockJobs from external file
-  it.skip('should return the filteredJobs array', () => {
+  it('should return the filteredJobs array', () => {
     const expectedAction = {
       type: 'STORE_QUERY',
       queriedJobs: mockJobs,
@@ -88,5 +88,30 @@ describe('storeRecentSearch', () => {
       recentSearch: location
     };
     expect(action.storeRecentSearch(location)).toEqual(expectedAction);
+  });
+});
+
+describe('storeUser', () => {
+  it('should return a new user object', () => {
+    const mockUser = {
+      id: '6',
+      name: 'Bo',
+      email: 'bo@bo.com',
+    };
+    const user = {
+      type: 'STORE_USER',
+      user: mockUser,
+    };
+    expect(action.storeUser(mockUser)).toEqual(user);
+  });
+});
+
+describe('removeUser', () => {
+  it('should remove the user', () => {
+    const removedUser = {
+      type: 'REMOVE_USER',
+      user: null,
+    };
+    expect(action.removeUser()).toEqual(removedUser);
   });
 });

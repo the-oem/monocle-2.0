@@ -1,4 +1,5 @@
 import * as reducer from '../lib/reducers/reducers';
+import mockJobs from '../test-helpers/mockJobsData';
 
 describe('fetch has erred', () => {
   it('should have a default state', () => {
@@ -74,7 +75,7 @@ describe('store queried jobs', () => {
     expect(reducer.queriedJobs(undefined, {})).toEqual(defaultState);
   });
 
-  it.skip('should store queried jobs object', () => {
+  it('should store queried jobs object', () => {
     const action = {
       type: 'STORE_QUERY',
       queriedJobs: mockJobs,
@@ -112,12 +113,37 @@ describe('store recent searches in an array', () => {
     };
     const expectedResponse = ['Denver, CO, USA'];
     expect(reducer.recentSearches(undefined, action)).toEqual(expectedResponse);
+  });
+});
 
-    // const actionTwo = {
-    //   type: 'STORE_RECENT_SEARCH',
-    //   recentSearch: 'Birmingham, AL, USA',
-    // };
-    // const secondResponse = ['Birmingham, AL, USA', 'Denver, CO, USA'];
-    // expect(reducer.recentSearches(undefined, actionTwo)).toEqual(secondResponse);
+describe('store user', () => {
+  it('should have a default state', () => {
+    const defaultState = null;
+    expect(reducer.user(undefined, {})).toEqual(defaultState);
+  });
+
+  it('should add user to the store', () => {
+    const action = {
+      type: 'STORE_USER',
+      user: {
+        id: '6',
+        name: 'Bo',
+        email: 'bo@bo.com',
+      },
+    };
+    const expectedResponse = {
+      id: '6',
+      name: 'Bo',
+      email: 'bo@bo.com',
+    };
+    expect(reducer.user(undefined, action)).toEqual(expectedResponse);
+  });
+
+  it('should remove a user from the store', () => {
+    const action = {
+      type: 'REMOVE_USER',
+      user: null,
+    };
+    expect(reducer.user(undefined, action)).toEqual(null);
   });
 });
